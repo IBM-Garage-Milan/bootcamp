@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: serviceb
-        image: quay.io/youruser/ossm-tracing-serviceb:1.0
+        image: $INTERAL_REGISTRY_HOST/yourproject/ossm-tracing-serviceb:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
