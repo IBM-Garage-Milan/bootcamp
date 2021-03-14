@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: serviceb
-        image: $INTERAL_REGISTRY_HOST/yourproject/ossm-tracing-serviceb:1.0
+        image: image-registry.openshift-image-registry.svc:5000/<yourproject>/ossm-tracing-serviceb:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
