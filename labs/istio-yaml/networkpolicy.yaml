@@ -1,0 +1,59 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: productpage-netpolicy
+spec:
+  podSelector:
+    matchLabels:
+      app: productpage
+      version: v1
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: details-netpolicy
+spec:
+ podSelector:
+  matchLabels:
+   app: details
+   version: v1
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: ratings-netpolicy
+spec:
+ podSelector:
+  matchLabels:
+   app: ratings
+   version: v1
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: reviews-v1-netpolicy
+spec:
+ podSelector:
+  matchLabels:
+   app: reviews
+   version: v1
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: reviews-v2-netpolicy
+spec:
+ podSelector:
+  matchLabels:
+   app: reviews
+   version: v2
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: reviews-v3-netpolicy
+spec:
+ podSelector:
+  matchLabels:
+   app: reviews
+   version: v3

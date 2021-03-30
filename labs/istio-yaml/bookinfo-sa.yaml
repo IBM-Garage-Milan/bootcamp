@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: productpage-sa
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: details-sa
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: reviews-sa

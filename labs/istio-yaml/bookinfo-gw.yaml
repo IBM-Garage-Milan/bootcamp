@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: observe-metrics-gateway
+  name: bookinfo-gw
 spec:
   selector:
-    istio: ingressgateway # use istio default controller
+    istio: ingressgateway 
   servers:
   - port:
       number: 80
