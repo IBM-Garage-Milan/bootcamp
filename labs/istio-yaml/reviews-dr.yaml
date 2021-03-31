@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: reviews-dr
+  name: reviews
 spec:
   host: reviews
   subsets:
