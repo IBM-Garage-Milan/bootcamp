@@ -4,9 +4,9 @@ metadata:
   name: reviews
 spec:
   hosts:
-  - reviews
+    - reviews
   http:
-  - route:
-    - destination:
-        host: reviews
-        subset: v1
+    - route:
+        - destination:
+            host: reviews
+            subset: v1

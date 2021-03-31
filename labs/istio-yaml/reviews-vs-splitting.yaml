@@ -4,14 +4,14 @@ metadata:
   name: reviews
 spec:
   hosts:
-  - reviews
+    - reviews
   http:
-  - route:
-    - destination:
-        host: reviews
-        subset: v2
-      weight: 50
-    - destination:
-        host: reviews
-        subset: v3
-      weight: 50
+    - route:
+      - destination:
+          host: reviews
+          subset: v2
+        weight: 50
+      - destination:
+          host: reviews
+          subset: v3
+        weight: 50

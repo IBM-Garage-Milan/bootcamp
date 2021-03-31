@@ -5,8 +5,8 @@ metadata:
   namespace: default
 spec:
   rules:
-  - services: ["ratings.default.svc.cluster.local"]
-    methods: ["GET"]
+    - services: ["ratings.default.svc.cluster.local"]
+      methods: ["GET"]
 ---
 apiVersion: rbac.istio.io/v1alpha1
 kind: ServiceRoleBinding
@@ -15,7 +15,7 @@ metadata:
   namespace: default
 spec:
   subjects:
-  - user: "*"
+    - user: "*"
   roleRef:
     kind: ServiceRole
     name: ratings-viewer

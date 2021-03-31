@@ -4,22 +4,22 @@ metadata:
   name: reviews
 spec:
   hosts:
-  - reviews
+    - reviews
   http:
-  - match:
-    - headers:
-        end-user:
-          exact: foo
-    fault:
-      abort:
-        percentage:
+    - match:
+        - headers:
+            end-user:
+              exact: foo
+      fault:
+        abort:
+          percentage:
             value: 100
-        httpStatus: 501
-    route:
-    - destination:
-        host: reviews
-        subset: v2
-  - route:
-    - destination:
-        host: reviews
-        subset: v3
+          httpStatus: 501
+      route:
+        - destination:
+            host: reviews
+            subset: v2
+    - route:
+        - destination:
+            host: reviews
+            subset: v3
